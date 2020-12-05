@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ForumDetailFragment"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/titleDetails"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Title of Forum"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNameDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="User name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="@+id/titleDetails"
+        app:layout_constraintTop_toBottomOf="@+id/titleDetails" />
+
+    <TextView
+        android:id="@+id/descriptionDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Description of forum"
+        app:layout_constraintStart_toStartOf="@+id/userNameDetails"
+        app:layout_constraintTop_toBottomOf="@+id/userNameDetails" />
+
+    <TextView
+        android:id="@+id/likesDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Likes"
+        app:layout_constraintStart_toStartOf="@+id/userNameDetails"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionDetails" />
+
+    <ImageView
+        android:id="@+id/deleteImageDetails"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/likesDetails"
+        app:layout_constraintEnd_toStartOf="@+id/likeImage"
+        app:layout_constraintTop_toTopOf="@+id/likesDetails"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/rubbish_bin" />
+
+    <ImageView
+        android:id="@+id/likeImage"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/deleteImageDetails"
+        app:srcCompat="@drawable/like_not_favorite" />
+
+    <EditText
+        android:id="@+id/commentEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Write Comment"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/likesDetails"
+        app:layout_constraintTop_toBottomOf="@+id/likeImage" />
+
+    <ImageView
+        android:id="@+id/imagepreview"
+        android:layout_width="74dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/image_icon"
+        app:layout_constraintStart_toStartOf="@+id/commentEditText"
+        app:layout_constraintTop_toBottomOf="@+id/commentEditText" />
+
+    <Button
+        android:id="@+id/addphotobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="Add Photo"
+        app:layout_constraintBottom_toBottomOf="@+id/imagepreview"
+        app:layout_constraintStart_toEndOf="@+id/imagepreview"
+        app:layout_constraintTop_toTopOf="@+id/imagepreview" />
+
+    <Button
+        android:id="@+id/postbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:text="post"
+        app:layout_constraintBottom_toBottomOf="@+id/addphotobutton"
+        app:layout_constraintEnd_toEndOf="@+id/likeImage"
+        app:layout_constraintTop_toTopOf="@+id/commentEditText" />
+
+    <ListView
+        android:id="@+id/commentsListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/postbutton"
+        app:layout_constraintStart_toStartOf="@+id/imagepreview"
+        app:layout_constraintTop_toBottomOf="@+id/imagepreview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

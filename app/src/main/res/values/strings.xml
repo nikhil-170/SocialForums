@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">InClass10</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="email_hint">Enter Email</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="error">Error !!!!</string>
+    <string name="success">Success !!!!</string>
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="CreateNewAccount">Create New Account</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="forum_title">Forum Title</string>
+    <string name="forum_description">Forum Description</string>
+    <string name="enter_comment">Please leave a comment before posting</string>
+    <string name="delete_message">Are you sure you want to delete?</string>
+    <string name="confirm">Confirm</string>
+
+</resources>
